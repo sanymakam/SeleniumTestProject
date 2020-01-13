@@ -1,0 +1,5 @@
+.idea/
+applog.txt
+build/
+gradlew.bat
+.gradle/
