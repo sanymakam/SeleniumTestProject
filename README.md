@@ -18,7 +18,7 @@
 4. Now project is ready to execute, provided the above mentioned setup of tools is done successfully and all the dependencies are downloaded in the IDE.
 
 # Steps to run
-1. To run as gradle - `./gradlew clean runTests -Dtag=calculator`
+1. To run as gradle - `./gradlew clean runTests -Dtag=search`
 
 # Reports 
 1. TestNG report can be seen at - `/build/<tag name>/html/index.html` (open in browser)
