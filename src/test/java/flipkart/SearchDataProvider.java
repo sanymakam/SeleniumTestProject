@@ -9,7 +9,7 @@ public class SearchDataProvider {
      * Provides search items for the test
      */
 
-    @DataProvider(name = "searchItems")
+    @DataProvider(name = "searchItems", parallel = true)
     public static Object[][] searchItems() {
         return new Object[][]{{"Mobiles"}, {"Televisions"},{"Refrigerators"}};
     }
