@@ -2,13 +2,13 @@ package flipkart;
 
 import org.testng.annotations.DataProvider;
 
-public class SearchDataProvider {
+public class NavigateDataProvider {
     /**
      * Provides navigate data for the test
      */
 
-    @DataProvider(name = "searchItems",parallel = true)
-    public static Object[][] searchItems() {
+    @DataProvider(name = "navigateSections",parallel = true)
+    public static Object[][] navigateSections() {
         return new Object[][]{{"Mobiles","mobile-phones-store"}, {"Appliances","appliances"},{"Travel","travel"}};
     }
 }

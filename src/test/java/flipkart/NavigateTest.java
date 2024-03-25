@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
  *
  * @author santhoshlmakam
  */
-public class SearchTest extends BaseTest {
+public class NavigateTest extends BaseTest {
     /**
      * This test will click on different section on Homepage
      * Verifies if navigated to correct page from the URL
@@ -18,8 +18,8 @@ public class SearchTest extends BaseTest {
      * @param verificationString
      */
 
-    @Test(groups = "search", priority = 0, dataProvider = "searchItems", dataProviderClass = SearchDataProvider.class)
-    public void searchItems(String selectionName, String verificationString) {
+    @Test(groups = "navigateTests", priority = 0, dataProvider = "navigateSections", dataProviderClass = NavigateDataProvider.class)
+    public void navigateTests(String selectionName, String verificationString) {
         HomePage homePage = new HomePage(driver.get());
         homePage.goToHomePage();
         homePage.closeLoginPopUp();
