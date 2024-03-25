@@ -4,25 +4,25 @@ import gradle.base.BaseTest;
 import gradle.pages.HomePage;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-
 /**
- * Test class for checkout cases
+ * Test class for sections navigation
  *
  * @author santhoshlmakam
  */
 public class SearchTest extends BaseTest {
     /**
-     * Test case to checkout pillow with valid credit card
-     *
-     * @param checkOutObject
+     * This test will click on different section on Homepage
+     * Verifies if navigated to correct page from the URL
+     * @param selectionName
+     * @param verificationString
      */
 
     @Test(groups = "search", priority = 0, dataProvider = "searchItems", dataProviderClass = SearchDataProvider.class)
-    public void searchItems(String item) {
+    public void searchItems(String selectionName, String verificationString) {
 		HomePage homePage = new HomePage(driver);
 		homePage.goToHomePage();
-		homePage.searchItem(item);
-		homePage.verifyTheSearch(item);
+		homePage.closeLoginPopUp();
+		homePage.clickOnSection(selectionName);
+		homePage.verifyCurrentPageByURL(verificationString);
     }
 }
